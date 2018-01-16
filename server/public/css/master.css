@@ -1,0 +1,11 @@
+body
+{
+    font-family: 'Lato', sans-serif;
+
+    margin: 20px 5%;
+}
+
+.light-font
+{
+    font-weight: 300;
+}

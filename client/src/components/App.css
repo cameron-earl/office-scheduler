@@ -1,0 +1,103 @@
+#loading-screen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading-screen .spinner {
+  animation: Logo-spin infinite 2s linear,
+             Color-shift infinite 5s linear;
+  font-size: 5em;
+}
+
+@keyframes Logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes Color-shift {
+    0%   {color: hsl(224, 80%, 60%);}
+    12%   {color: hsl(192, 80%, 60%);}
+    25%   {color: hsl(160, 80%, 60%);}
+    37%   {color: hsl(128, 80%, 60%);}
+    50%   {color: hsl(96, 80%, 60%);}
+    62%   {color: hsl(64, 80%, 60%);}
+    75%   {color: hsl(32, 80%, 60%);}
+    87%   {color: hsl(0, 80%, 60%);}
+    100%   {color: hsl(224, 80%, 60%);}
+}
+
+div.App {
+  min-height: 100vh;
+  padding-bottom: 56px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+}
+
+div.main {
+  /*overflow-x: auto;*/
+  /*display: flex;*/
+  flex: 1 1 auto;
+}
+
+/*.home > .row {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+}*/
+
+.home > .row > .col {
+  display: flex;
+  align-items: center;
+}
+
+/*.home > .row > .col > div.content {
+  flex: 1 1 auto;
+}*/
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+a.nav-link {
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color: #f0f9ff;
+  cursor: pointer;
+}
+
+.list-group-item > svg {
+  transform: scale(2);
+  margin-right: 15px;
+  color: rgba(0,0,0,0);
+  transition: .2s all;
+  margin-top: -3px;
+}
+
+.list-group-item:hover > svg {
+  color: rgba(0,0,0,.2);
+}
+
+.list-group-item > svg:hover {
+  transform: scale(2.3);
+  color: black;
+}
+
+.shift-cell:hover {
+  background-color: #f0f9ff;
+  cursor: pointer;
+}
